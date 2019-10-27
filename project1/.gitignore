@@ -1,0 +1,12 @@
+proj1.pdf
+*.swp
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.toc
+*.lot
