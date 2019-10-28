@@ -3,13 +3,11 @@
 % useful packages
 \usepackage[utf8]{inputenc} % UTF-8 support
 \usepackage[american]{babel} % for changing particular titles
-\usepackage{csquotes} % recommended for biblatex
 \usepackage[margin=1in]{geometry} % set 1in margins
 \usepackage{hyperref} % hyperlinks
 \usepackage{natbib} % for bibliography
-\usepackage{lipsum} % for loreum ipsum placeholder text
 
-\title{Term Project: Inspiration / Initial Literature Review}
+\title{Term Project Initial Literature Review}
 \author{Joseph~Petitti}
 \date{\today}
 
@@ -17,9 +15,119 @@
 
 \maketitle
 
-\lipsum
+\cite{maybury1990mind} discusses the social implications of artificial
+intelligence in general, as well as specifically in interactive media contexts.
+While it was written nearly 30 years ago, many of the paper's points are still
+relevant to AI discussions today. The author fears that like how humans lost
+certain physical skills, such as blacksmithing, to machines, we may also lose
+some intellectual skills as well. For example, basic arithmetic skills are
+declining because of the increasing convenience of calculators. As a more
+abstract fear, an MIT professor writes that ``If we had a machine that could
+think as well as people, and whose detailed workings were completely open to
+inspection, we would find intellectual respect, pride, and admiration
+impossible.'' \citeauthor{maybury1990mind} dismisses this claim, contending
+instead that such a machine would be nearly impossible for a human to understand
+because of its enormity. Further, we admire people who excel in physical
+endeavors such as athletes and weightlifters even though machines can outperform
+them. Still, there are other concerns, such as moral responsibility. If an
+autonomous artificial intelligence finds itself in a moral dilemma, what should
+it do? Should a robot act in a moral manner even if it goes against the orders
+of its owner? Who is responsible if a robot commits an immoral act?
 
-Test \cite{Abril:2007:PHD:1188913.1188915}.
+It's interesting to see that the same concerns people had about artificial
+intelligence in the early 1990s are still being discussed today. The references
+to specific technologies are dated (e.g. ``Today's most advanced programs cannot
+recognize a face''), but the general ideas of the paper are still relevant. I
+think the paper's greatest weakness is failing to consider the dehumanizing
+effects of AI. Dealing with artificial intelligences too much can cause people
+to start to treat real humans the same way---as no more than machines or
+objects. As AI assistants and characters become more prevalent in daily life I
+think this problem will become more apparent, so it is important to consider
+when designing AIs today.
+
+\vspace{10pt}
+
+\cite{orkin2006three} discusses the techniques used in the development of the
+game \textit{F.E.A.R.} Although the AI enemies display advanced behavior (for
+example, they ``take cover, blind fire, dive through windows, flush out the
+player with grenades, communicate with teammates, and more''), they have a
+finite-state machine with only two states. Instead of using a complex procedural
+FSM, \textit{F.E.A.R.} opts for a simple FSM with declarative planning of enemy
+goals. According to \citeauthor{orkin2006three}, planning is ``a formalized
+process of searching for sequence of actions to satisfy a goal.'' Designers only
+plan the environments, such as placing cover for enemies to hide behind and
+multiple entrances for them to use for flanking. The enemy AI must autonomously
+make use of these elements to achieve its goals. Each enemy has a set of actions
+they can use, and a cost associated with each one. The game uses the A*
+algorithm to decide on a course of actions to take in order to achieve a goal.
+
+I found this paper interesting because it describes a novel way of organizing
+discrete AI actions that is simple to implement but leads to complex and
+interesting behavior in practice. I've played \textit{F.E.A.R.} and been
+impressed by the tactics used by the AI enemies, so it's interesting to see that
+it's implemented with just a three-state FSM and uses A* for something other
+than pathfinding.
+
+\vspace{10pt}
+
+\cite{huang2007extracting} explains a method for creating convincing chatbots
+based on online discussion forums. Replies to a forum topic are classified using
+a support-vector machine (SVM) to determine which ones are actually relevant to
+the topic being discussed. Then the replies are ranked by another SVM based on
+their content qualities, and the top replies are used as input knowledge for the
+chatbot. When tested on a movie discussion forum, the chatbot's selected
+responses seemed almost human-like.
+
+This paper shows a technique for creating human-like AI by mathematically
+categorizing data from real human sources. Through mathematical analysis and
+machine learning you can train an AI model to imitate human responses in a
+convincing manner. Although this particular paper is a little dry and overly
+technical, the underlying technology techniques it describes are fascinating,
+and is an important topic for any designer of artificial intelligence systems.
+
+\vspace{10pt}
+
+\cite{factorio2019} is a blog post by the developers of \textit{Factorio}, a
+management simulation game, about a new pathfinding algorithm they implemented
+for the game's basic enemies. Factorio's main enemies are giant alien bugs
+called Biters that attack the player's factory in response to pollution from it.
+Naturally they must find ways around obstacles like trees, cliffs, and bodies of
+water. Originally, the Biters simply used the A* algorithm to find the shortest
+path along the straight line between their origin and destination points, but in
+October 2019 they developers switched to a smarter heuristic. To improve
+pathfinding around large obstacles like lakes, the developers used a type of
+technique called hierarchical pathfinding. In this technique, the map of the
+game world is simplified into an abstraction, the AI finds a path through this
+abstraction, and then uses it to inform its path through the real game world. In
+Factorio, the game world is made up of 32-by-32 chunks of tiles. The game splits
+each chunk into ``components,'' blocks of tiles that are all reachable from any
+tile in that block. The tiles of each component on an edge of a chunk are
+remembered, so the game knows which areas are connected to each other in the
+simplified version of the game world. The path through the simplified world is
+much simpler to calculate, and is used as a suggestion for the path through the
+real world, dramatically speeding up pathfinding time around large obstacles.
+
+The Factorio developer team does a good job of explaining a complex algorithm in
+this blog post, illustrating the process with pictures and animations. The
+technique they use is a clever solution to a difficult pathfinding problem that
+increases the efficiency of a CPU-intensive part of the game. This change is a
+tiny piece of a massively complex game, but it helps make the game more
+responsive and efficient, improving the core experience for players.
+
+\vspace{10pt}
+
+\cite{emilio2010pac} describes an algorithm for the game \textit{Ms.~Pac-Man}
+based on the behavior of ant colonies. The paper lists several useful behaviors
+of ants in ant colonies, and how their heuristics can be applied to solving game
+problems such as guiding Ms. Pac-Man through a maze filled with hostile ghosts.
+The researchers used a genetic algorithm to optimize the parameters of these ant
+behaviors, and were able to create an effective game-playing AI.
+
+This article is interesting because it showcases how AI research in games can be
+inspired by the behavior of real-life organisms. Just as evolution selected for
+useful behavior over the course of millions of years of evolution, genetic
+algorithms can refine artificial intelligence algorithms for use in interactive
+media.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references}
