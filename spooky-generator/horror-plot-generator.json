@@ -1,0 +1,156 @@
+{
+  "origin": [
+    "#hero.capitalize# must face #monster# as it #monsteraction# #safelocation#.",
+    "#heros.capitalize# #move# #spookylocation# only to find it occupied by #monsters#.",
+    "#hero.capitalize#'s obsession with #spookyabstract# leads them to create #monster#, which then #moves# #safelocation#.",
+    "When #hero# accidentally triggers #spookyevent#, only #heros# and #hero# can #goodevent#.",
+    "When #monster# #monsteraction# the inhabitants of #safelocation#, #hero#, #hero#, and #hero# seek to #goodevent#.",
+    "Ignoring the warnings of #wiseperson#, #heros# take on the task of defending #safelocation# from #monsters#.",
+    "In #safelocation#, #heros# perform a ritual in an attempt to debunk the lore of #monster#. When one of them goes mysteriously missing, they begin to suspect the legends may be true",
+    "#number.capitalize# years have passed since the events of the last film. #monster.capitalize# has been resurrected once again and seeks revenge on #hero#, its former master.",
+    "#heros.capitalize# reunite for a trip to #spookylocation#, but encounter #monster# stalking them.",
+    "#hero.capitalize# and #heros# are plagued by #monster# in #spookylocation#.",
+    "After #spookyevent# in the wake of #disaster# and with only 48 hours to live, #hero# struggles to find a new home for #innocents#.",
+    "In #year#, #heros# are sent to investigate #spookylocation# which disappeared mysteriously #number# years earlier.",
+    "#hero.capitalize# and #hero# race to save #innocents# from #monsters#.",
+    "When #monster# bites #hero#'s mother, she's transformed into #monster# and begins killing the townspeople of #safelocation#.",
+    "#monster.capitalize# is revived when #hero# accidentally reads an ancient spell that could lead to #spookyevent#.",
+    "#heros.capitalize# awake, locked inside #spookylocation# with cameras mounted on the walls, watching their every move.",
+    "Traumatized by #spookyevent#, #hero# slowly becomes #monster#.",
+    "The true story of #monster# created by #heros#."
+  ],
+  "move": [
+    "invade",
+    "visit",
+    "move into",
+    "explore"
+  ],
+  "moves": [
+    "invades",
+    "visits",
+    "moves into",
+    "explores"
+  ],
+  "heros": [
+    "the group",
+    "the government",
+    "four friends",
+    "four high school girls",
+    "three astronauts",
+    "an ex-cop and his family"
+  ],
+  "wiseperson": [
+    "the locals",
+    "scientists",
+    "their parents",
+    "teachers"
+  ],
+  "hero": [
+    "a young nurse",
+    "Tom Cruise",
+    "Dr. Louis Creed",
+    "a family",
+    "a man with a dark past",
+    "a kid",
+    "a disgruntled female scientist",
+    "a ragtag crew of ex-soldiers",
+    "a group of teenage camp counselors",
+    "an occult novelist",
+    "a group of young people",
+    "Susan",
+    "Karen, a psychotherapist,"
+  ],
+  "monster": [
+    "a new zombie threat",
+    "a mutant super-soldier",
+    "an insatiable great white shark",
+    "a masked, homicidal maniac",
+    "a serial killer",
+    "Slender Man",
+    "Dracula",
+    "Chucky",
+    "a sinister presence",
+    "a Sumatran rat-monkey",
+    "an ancient Egyptian priest named Imhotep",
+    "a crime boss"
+  ],
+  "monsters": [
+    "pirate ghosts",
+    "aliens",
+    "the government",
+    "cultists",
+    "clowns"
+  ],
+  "monsteraction": [
+    "destroys",
+    "pillages",
+    "terrorizes"
+  ],
+  "safelocation": [
+    "a small, peaceful town",
+    "Amity Island",
+    "Boston",
+    "a small town in Massachusetts",
+    "Worcester",
+    "Mexico"
+  ],
+  "spookylocation": [
+    "an abandoned cabin",
+    "Romania",
+    "the outskirts of town",
+    "Boston",
+    "the school",
+    "the starship 'Event Horizon'",
+    "Salem, Massachusetts",
+    "the Bermuda Triangle",
+    "a national forest",
+    "a warehouse"
+  ],
+  "spookyabstract": [
+    "the government",
+    "the occult",
+    "ghosts"
+  ],
+  "spookyevent": [
+    "the universe's most leath hunters' return to Earth",
+    "a nuclear meltdown",
+    "the summoning of hordes of demons",
+    "being turned into a werewolf",
+    "being infected",
+    "the death of a child",
+    "their mother's death"
+  ],
+  "goodevent": [
+    "prevent the end of the human race",
+    "save the town",
+    "defeat the evil",
+    "save the world"
+  ],
+  "innocents": [
+    "the townspeople",
+    "their families",
+    "a twelve-year-old boy"
+  ],
+  "disaster": [
+    "a violent pandemic",
+    "the apocalypse",
+    "a nuclear meltdown"
+  ],
+  "number": [
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+    "one hundred"
+  ],
+  "year": [
+    "19th-century England",
+    "2047",
+    "1983",
+    "2004"
+  ]
+}
