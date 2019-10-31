@@ -86,3 +86,42 @@ Quote:
 
 ## Microsoft's Tay is an Example of Bad Design
 
+Questions:
+
+  - What could Microsoft have done to prevent this outcome?
+
+  - How can you find a meaningful but inoffensive corpus of data to train bots
+    like Tay?
+
+  - How can you teach a bot to understand the context of words like
+    ``holocaust?''
+
+Takeaways:
+
+  - AI designers are responsible for their creations.
+
+  - Failing to consider the interactions a bot can have with users is bad
+    design.
+
+Quote:
+
+``With the future of chat and AI, designers and engineers have to start thinking
+about codes of conduct and how accidentally abusive an AI can be, and start
+designing conversations with that in mind.''
+
+## Summary
+
+Each of these articles are about how to design good procedurally generated
+content. Designers have to make a conscious effort to generate content that is
+not only interesting and meets the goals of the project, but that is also
+non-problematic and inoffensive. We are all responsible for the things we
+create, and with artificial intelligence these things can have far-reaching
+consequences that we never considered when initially designing them. That's why
+AI designers need to put in the effort to ensure their procedurally generated
+content is safe.
+
+These challenges have come up in CS 4100 as well as other classes I've taken at
+WPI. For the Twitter chat bot I made I had to consider whether it could generate
+tweets that were offensive or inflammatory. In other CS and IMGD classes I have
+had to consider how users would interact with the programs I created, and
+whether these interactions would be problematic.
