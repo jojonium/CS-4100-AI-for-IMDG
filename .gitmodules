@@ -1,0 +1,3 @@
+[submodule "Mario-AI-Framework"]
+	path = Mario-AI-Framework
+	url = git@github.com:jojonium/Mario-AI-Framework.git
