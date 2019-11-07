@@ -1,3 +1,6 @@
 [submodule "Mario-AI-Framework"]
 	path = Mario-AI-Framework
 	url = git@github.com:jojonium/Mario-AI-Framework.git
+[submodule "proc-cave-game"]
+	path = proc-cave-game
+	url = git@github.com:bandaloo/proc-cave-game.git
