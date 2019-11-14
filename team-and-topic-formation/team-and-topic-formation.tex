@@ -1,0 +1,112 @@
+\documentclass[a4paper, 10pt, american]{article}
+
+% useful packages
+\usepackage[utf8]{inputenc} % UTF-8 support
+\usepackage[american]{babel} % for changing particular titles
+%\usepackage[margin=1in]{geometry} % set 1in margins
+\usepackage{hyperref} % hyperlinks
+\usepackage{natbib} % for bibliography
+
+\title{Term Project: Team and Topic Formation}
+\author{Cole~Granof, Joseph~Petitti, Matthew~Puentes}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+	\item Team members: Cole Granof, Joseph Petitti, and Matthew Puentes
+	\item Topic for our project: ``procedurally generated levels and enemies for
+		a top-down roguelite twinstick shooter.''
+	\item We hope to create an engaging and unique game, similar to other
+		procedurally generated games like \textit{The Binding of Isaac} and
+		\textit{Nuclear Throne}, using the principles of parameterized design we
+		explored in this class. Levels will be generated to form natural-looking
+		cave-like structures, enemies will be randomized by assigning them
+		points in various attributes and giving them random facial
+		characteristics, and power-ups will also be randomly generated. In this
+		way the game will be different each time it is played.
+	\item This project is interesting to us because not many existing roguelites
+		utilize both procedurally generated levels and procedurally generated
+		enemies. The combination of these two techniques can allow for a wide
+		variety of different encounters and unique gameplay scenarios. We
+		believe that cellular automata can be used to create really cool levels,
+		and this technique is underused in existing games.
+	\item We just want to make a fun game that other people can enjoy. Hopefully
+		the procedural nature of the levels and enemies will give the game
+		longevity. There isn't a high potential for generating offensive content
+		based on the constraints we use on the engine.
+	\item Three external sources we have read:
+		\begin{itemize}
+			\item \cite{liu2017}. The researchers of this paper used an AI agent
+				to iteratively adjust the difficulty of a game based on the AI
+				agent's performance. The researchers adjusted various parameters
+				that dictate different aspects of difficulty in order to create
+				a balanced experience. Essentially, this paper provides an
+				outline for automating play testing, as well as a breakdown of
+				gameplay elements that increase difficulty when individually
+				scaled.
+
+				Performing this kind of AI-powered play testing is likely
+				outside the scope of our project. However, this paper separates
+				the difficulty of their ``pace-battle game'' into various
+				parameters, such as speed of the player, the speed of enemies
+				and the amount of bullets fired. Breaking down difficulty into
+				these discrete components will help us generate enemies with
+				specific levels of difficulty. Furthermore, with enough
+				well-chosen parameters, we can create enemies that challenge the
+				player in different ways. This will hopefully encourage players
+				to change up their strategies.
+
+			\item \cite{pell1992}. This paper details a way to fully specify and
+				generate chess-like games such as Western Chess, Xiangqi, Shogi
+				and checkers. Capture rules and piece movement can be specified
+				to encompass any existing chess like games, and, of course,
+				define completely new games as well.
+
+				This inspired the idea of randomly generating a rogue-like where
+				the behavior of the enemies is generated. This forces the player
+				to learn a new set of completely novel enemies each run. The
+				specification of chess-like games will help guide us in
+				designing a flexible specification to use for generating enemy
+				aesthetics and behavior.
+
+			\item \cite{emilio2010}. This paper describes an algorithm for
+				playing \textit{Ms. Pac-Man} based on the behavior of ant
+				colonies. The paper lists several useful behaviors of ants in
+				ant colonies, and how their heuristics can be applied to solving
+				game problems such as guiding Ms. Pac-Man through a maze filled
+				with hostile ghosts. The researchers used a genetic algorithm to
+				optimize the parameters of these ant behaviors, and were able to
+				create an effective game-playing AI.
+
+				The researchers' technique for designing agent-based AI inspired
+				us to try using a similar method for our enemy AI.
+		\end{itemize}
+	\item Six external sources we want to read next:
+		\begin{itemize}
+			\item
+			\item
+			\item
+			\item
+			\item
+			\item
+		\end{itemize}
+	\item Three questions or concerns we have related to the project
+		\begin{itemize}
+			\item Starting from scratch without using any existing engine makes
+				a lot more work for us, such as implementing a graphics manager,
+				physics system and collision system.
+			\item We're concerned with making sure the level designs and
+				generated enemies are both interesting and fun to experience,
+				without sacrificing one for the other.
+			\item How do we make sure the game is playable without being too
+				easy or too hard?
+		\end{itemize}
+\end{itemize}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}

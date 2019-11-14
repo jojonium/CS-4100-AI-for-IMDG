@@ -1,0 +1,74 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{3}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Emilio, Moises, Gustavo, and Yago}{Emilio
+  et~al\mbox{.}}{2010}]%
+        {emilio2010}
+\bibfield{author}{\bibinfo{person}{Martin Emilio}, \bibinfo{person}{Martinez
+  Moises}, \bibinfo{person}{Recio Gustavo}, {and} \bibinfo{person}{Saez Yago}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Pac-mAnt: Optimization based on ant colonies
+  applied to developing an agent for Ms. Pac-Man}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2010 IEEE Conference on
+  Computational Intelligence and Games}}. IEEE, \bibinfo{pages}{458--464}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Liu, Togelius, P{\'e}rez-Li{\'e}bana, and
+  Lucas}{Liu et~al\mbox{.}}{2017}]%
+        {liu2017}
+\bibfield{author}{\bibinfo{person}{Jialin Liu}, \bibinfo{person}{Julian
+  Togelius}, \bibinfo{person}{Diego P{\'e}rez-Li{\'e}bana}, {and}
+  \bibinfo{person}{Simon~M Lucas}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Evolving game skill-depth using general video game
+  {AI} agents}. In \bibinfo{booktitle}{\emph{2017 {IEEE} Congress on
+  Evolutionary Computation {CEC}}}. IEEE, \bibinfo{pages}{2299--2307}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Pell}{Pell}{1992}]%
+        {pell1992}
+\bibfield{author}{\bibinfo{person}{Barney Pell}.}
+  \bibinfo{year}{1992}\natexlab{}.
+\newblock \showarticletitle{Metagame in symmetric chess-like games}.
+\newblock  (\bibinfo{year}{1992}).
+\newblock
+
+
+\end{thebibliography}
