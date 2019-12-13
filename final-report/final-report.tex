@@ -1,6 +1,6 @@
 \documentclass[a4paper, 12pt]{article}
 
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc} % for UTF-8 support
 
 \title{AI for IMGD Final Project Report}
 \author{Cole Granof \and Joseph Petitti \and Matthew Puentes}
@@ -46,12 +46,28 @@ The game also features a robust power up system. All power ups are applicable to
 both the hero and the enemies---both are abstracted to a Creature superclass.
 All Creatures share functionality such as speed, shot rate, and bullet damage.
 In this way, it's easy to create unique and challenging enemies by applying
-randomized power ups to them.
+randomized power ups to them. We plan to eventually have 26 different power
+ups (one for each letter of the alphabet), but for this early beta version we
+have only seven.
+
+To make our game accessible to as many people as possible we implemented it in
+JavaScript using the HTML5 canvas API for graphics. To give ourselves the most
+control over the game environment we decided to write absolutely everything
+ourselves, from scratch. We use no game engine, no third party libraries, no
+preprocessor, no front-end build tools, and no graphics API but the one built in
+to every browser. We implemented a full-fledged game engine in JavaScript that
+runs game logic independent of screen refresh rate, handles collisions in an
+efficient way, has a robust collision-mapping system using first-class
+functions, implements basic kinematics and particles, has customizable camera
+controls, and uses generalized keyboard and gamepad input.
 
 \section{Why We Did It}
 
 % TODO write
 
+\section{How It Relates to Things We Read}
+
+% TODO write
 
 \section{How It Works}
 
