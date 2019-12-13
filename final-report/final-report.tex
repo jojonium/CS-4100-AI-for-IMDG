@@ -6,7 +6,7 @@
 \usepackage{biblatex}       % for references
 
 \bibliography{references}   % put citations here
-\graphicspath{ {./images/} } % put images in here
+\graphicspath{{./images/} } % put images in here
 
 \title{AI for IMGD Final Project Report}
 \author{Cole Granof \and Joseph Petitti \and Matthew Puentes}
@@ -105,6 +105,18 @@ encourages the player to explore the map and find the small caves that spawn.
 Effectively, the chance for a power-up to spawn is inversely proportional to the
 size of the cave.
 
+In order to determine where to spawn power ups and connect the map, we had to
+build some sort of system for keeping track of where each separate cave was.
+Originally, our Game-Of-Life rules were making good cavernous levels, but didn't
+cause enough separation. While we could make more separated caves by fiddling
+with the Game-Of-Life rules, we needed a solution to mark and connect areas. In
+order to fix this, we added a cave connection stage to the level generation,
+which served two purposes.  Firstly, a flood-fill algorithm marks each tile on
+the map with either a 0 (signifying a wall) or a number marking which ``Cave''
+it is part of. This became especially useful later, when we had to spawn enemies
+and power-ups away from the central cave. The second stage runs through and
+connects each cave to the central, largest cave with lines of breakable blocks.
+This ensures that the whole map is able to be traversed.
 
 % TODO write
 
@@ -124,6 +136,24 @@ size of the cave.
 
 
 \section{Self Evaluation}
+
+\subsection{Matt Puentes}
+
+I worked half/half on implementing engine features and game-specific features.
+My main contribution was on Collision, which I built from scratch. The collision
+works fairly well, with every entity having a-b rectangle collision with any
+other entities. The collision interacts well between entities and the world as
+well, allowing smooth movement and efficient terrain detection. It was took a
+while to get all of the implementation details right and to do it efficiently, 
+but it meant that later on we were able to fit a lot of entities on screen
+without a slowdown.
+
+My other big contribution was on the level generation. I created both the
+flood fill and cave connection systems described in the sections above, helping
+the game world feel more like we intended.
+
+Additionally, I worked with Joe, Cole and our play testers to help balance the
+game (capping power-up multipliers, changing world generation parameters, etc.)
 
 \subsection{Cole Granof}
 
