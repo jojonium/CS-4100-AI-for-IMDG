@@ -10,6 +10,52 @@
 
 \maketitle
 
+\section{Cole Granof}
+
+I worked on implementing game engine features so that my teammates would be able
+to easily add functionality to our game. This included a particle system, basic
+kinematics, and a system from adding behaviors to entities in the world. This
+was a lot of work to do without any external libraries, but I am happy with the
+result.
+
+Throughout the development, I added various optimizations so that we could have
+larger worlds with more enemies, all with minimal to no slowdown.
+
+I took the first pass at generating random cave levels using cellular automata.
+Matt improved on this by connecting the disconnected caves with breakable walls
+so that the entire cave was traversable.
+
+\section{Joseph Petitti}
+
+I worked mostly on the power-up system, implementing the Creature superclass and
+setting up the system to allow for general-purpose power-ups that can apply to
+both the player character and the enemies. For many of the commonly used
+actions, such as shooting, a Creature has an array of functions that are
+executed when that action takes place. Because functions are first-class
+citizens in JavaScript, they can be passed as arguments or returned from
+other functions, making this behavior much easier. Because of the Creature
+abstraction, power-ups can be applied to enemies the same way they are applied
+to the hero, allowing us to use randomly generated power-ups to create stronger,
+more interesting enemies.
+
+I think our team worked pretty well together, since we are all friends and have
+worked together on projects in the past. We ended up creating a really cool game
+that we plan to work on more in the future.
+
+Perhaps we could have done a better job of splitting up the work. Early on in
+the project Matt and I were swamped with work from other classes and Cole ended
+up implementing a lot of the early engine features on his own. In future
+projects I will likely set up explicit deadlines for each team member to prevent
+this from happening again.
+
+Each member of the team put in a ton of effort for this project---probably
+dozens of hours each. We wrote efficient, well-organized, and well-documented
+code, to such a degree that we all want to continue working on the project
+afterward. Further, I learned a lot about procedural generation and
+parameterized design from completing this project, which will influence projects
+I do in the future. For theses reasons, I think every member of our group
+deserves an A.
+
 \section{Matt Puentes}
 
 I worked half/half on implementing engine features and game-specific features.
@@ -27,21 +73,6 @@ the game world feel more like we intended.
 
 Additionally, I worked with Joe, Cole and our play testers to help balance the
 game (capping power-up multipliers, changing world generation parameters, etc.)
-
-\section{Cole Granof}
-
-I worked on implementing game engine features so that my teammates would be able
-to easily add functionality to our game. This included a particle system, basic
-kinematics, and a system from adding behaviors to entities in the world. This
-was a lot of work to do without any external libraries, but I am happy with the
-result.
-
-Throughout the development, I added various optimizations so that we could have
-larger worlds with more enemies, all with minimal to no slowdown.
-
-I took the first pass at generating random cave levels using cellular automata.
-Matt improved on this by connecting the disconnected caves with breakable walls
-so that the entire cave was traversable.
 
 \end{document}
 
