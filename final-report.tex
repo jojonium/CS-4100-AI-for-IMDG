@@ -1,0 +1,50 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+\title{AI for IMGD Final Project Report}
+\author{Cole Granof \and Joseph Petitti \and Matthew Puentes}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+For the final AI for IMGD project we created a procedurally generated, top-down,
+twin stick shooter game, inspired by games like \textit{The Binding of Isaac}
+and \textit{Nuclear Throne}. In the game, the player controls a small
+eyeball-like character that can move around the game world, a large series of
+caves. There are several types of enemies that inhabit the caves, including some
+that chase the player, others that wander around randomly, and even some that
+can shoot bullets. Players fight these enemies while exploring the cave to track
+down three Boss enemies, which must be defeated to win. They can also find power
+ups hidden the caves, powerful artifacts that increase the player's abilities in
+unique ways.
+
+The hero is controlled with a keyboard or gamepad, and can move around and shoot
+in any direction. Like all game entities in our custom engine, the hero has a
+velocity, acceleration, and drag. This allows it realistically reach a maximum
+speed in a way that is simple to program and maintain.
+
+There are three main enemy types: Chase, Scatter, and Shooter. Chase enemies
+sleep until the player comes close or shoots at them, but chase after the hero
+as soon as they wake up. Scatter enemies wander around the board in random and
+unpredictable ways. Shooter enemies maintain their distance and fire slow-moving
+projectiles at the hero. Each enemy has a random chance to be bigger. Bigger
+enemies split into several smaller enemies when they are killed, providing
+varying levels of difficulty.
+
+Each enemy type has a different type of face, which is further modified by
+randomly generated parameters. For example, Chase enemies have one large eye in
+the center of their face, but the size and positioning of their eye and mouth is
+tweaked by parameters. The game world has randomly generated color scheme, which
+is applied to the cave environment as well as enemies.
+
+The game also features a robust power up system. All power ups are applicable to
+both the hero and the enemies---both are abstracted to a Creature superclass.
+All Creatures share functionality such as speed, shot rate, and bullet damage.
+In this way, it's easy to create unique and challenging enemies by applying
+randomized power ups to them.
+
+\end{document}
+
