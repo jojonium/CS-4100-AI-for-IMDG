@@ -80,9 +80,26 @@ From a more academic standpoint, the heavy use of procedural generation in this
 genre of game allowed us to practice the concepts we learned in class and from
 the readings.
 
+
 \section{How It Relates to Things We Read}
 
-% TODO write
+The main paper that inspired the design of our game was "Metagame in Symmetric
+Chess-like games". This paper outlined a syntax for fully specifying chess-like
+games. The format specified in the paper is enough to fully describe existing
+chess-like games, such as Western Chess, Chinese chess and Japanese
+chess~\autocite{pell1992}. This paper was inspiring because it showed us how
+rule sets could be programmatically defined to create entirely new games. This
+paper was concerned with chess-like games, but this sparked a significant amount
+of discussion among us about what other components of game genres could be
+codified. This lead us to make our power-up system highly generalized; both the
+player character and the enemies can accept the same kinds of upgrades which add
+various modifiers.
+
+This paper helped us guide our thinking about how to parameterize difficulty.
+The researchers used AI agents to iteratively balance a game for
+difficulty~\autocite{liu2017}. We generate enemies of different difficulty
+levels by modifying various stats.
+
 
 \section{How It Works}
 
@@ -140,6 +157,24 @@ This ensures that the whole map is able to be traversed.
 
 
 \section{What We Learned}
+
+Collaborating on this project in a team of three was an excellent learning
+experience in software development, procedural generation and game design. Our
+brainstorming sessions about generation and gameplay left us with many ideas. It
+was a rewarding challenge to take our ideas and translate them into abstractions
+we could implement into our code.
+
+Because we randomly generate both the enemies and the levels, we were able to
+see emergent gameplay situations early in development. However, tweaking the
+generation to achieve a fun and balanced experience was difficult, and it is
+something we are still actively working on.
+
+It is an inherent challenge to use a dynamically typed language (such as
+JavaScript) for anything larger than a short program. The tooling and recent
+language features were crucial to keep organized. Code splitting was done with
+ES6 modules, and type-checking was done with the help of JSDoc. We merged code
+into the master branch through pull requests on GitHub. This allowed us to
+review each other's code so we could provide feedback and stay up to date.
 
 % TODO write
 
