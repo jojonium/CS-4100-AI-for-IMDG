@@ -9,7 +9,7 @@
 \graphicspath{{./images/} } % put images in here
 
 \title{AI for IMGD Final Project Report}
-\author{Cole Granof \and Joseph Petitti \and Matthew Puentes}
+\author{Cole Granof \and Joe Petitti \and Matt Puentes}
 \date{\today}
 
 \begin{document}
@@ -25,9 +25,9 @@ eyeball-like character that can move around the game world, a large series of
 caves. There are several types of enemies that inhabit the caves, including some
 that chase the player, others that wander around randomly, and even some that
 can shoot bullets. Players fight these enemies while exploring the cave to track
-down three Boss enemies, which must be defeated to win. They can also find power
-ups hidden the caves, powerful artifacts that increase the player's abilities in
-unique ways.
+down three Boss enemies, which must be defeated to win. They can also find
+power-ups hidden the caves, powerful artifacts that increase the player's
+abilities in unique ways.
 
 The hero is controlled with a keyboard or gamepad, and can move around and shoot
 in any direction. Like all game entities in our custom engine, the hero has a
@@ -48,13 +48,13 @@ the center of their face, but the size and positioning of their eye and mouth is
 tweaked by parameters. The game world has randomly generated color scheme, which
 is applied to the cave environment as well as enemies.
 
-The game also features a robust power up system. All power ups are applicable to
+The game also features a robust power-up system. All power-ups are applicable to
 both the hero and the enemies---both are abstracted to a Creature superclass.
 All Creatures share functionality such as speed, shot rate, and bullet damage.
 In this way, it's easy to create unique and challenging enemies by applying
-randomized power ups to them. We plan to eventually have 26 different power
-ups (one for each letter of the alphabet), but for this early beta version we
-have only seven.
+randomized power-ups to them. We plan to eventually have 26 different power-ups
+(one for each letter of the alphabet), but for this early beta version we have
+only seven.
 
 To make our game accessible to as many people as possible we implemented it in
 JavaScript using the HTML5 canvas API for graphics. To give ourselves the most
@@ -69,7 +69,16 @@ controls, and uses generalized keyboard and gamepad input.
 
 \section{Why We Did It}
 
-% TODO write
+The main reason we made a game like this is because we thought it would be fun.
+All three group members are fans of \textit{The Binding of Isaac}, and we enjoy
+procedurally generated ``rogue-lite'' games. We figured since these types of
+games are fun to play they would also be fun to program. We turned out to be
+right, and had a lot of fun implementing the systems we enjoyed seeing in other
+video games.
+
+From a more academic standpoint, the heavy use of procedural generation in this
+genre of game allowed us to practice the concepts we learned in class and from
+the readings.
 
 \section{How It Relates to Things We Read}
 
@@ -80,8 +89,8 @@ controls, and uses generalized keyboard and gamepad input.
 Caves are generated with an augmented rule set of Conway's Game of Life. Instead
 of the typical rules, a cell dies if it has anywhere from zero to three
 neighbors. A cell stays the same if it has 4 neighbors. If a cell has greater
-than four neighbors, a new cell is born. Unlike Conway's Game of Life, this
-rule set reaches a stable state after only a few iterations, and produces the
+than four neighbors, a new cell is born. Unlike Conway's Game of Life, this rule
+set reaches a stable state after only a few iterations, and produces the
 cave-like structures you see in our game. We also count cells that are outside
 the boundary of the grid as alive cells. Figures
 
