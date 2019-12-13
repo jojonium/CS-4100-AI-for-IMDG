@@ -1,6 +1,9 @@
 \documentclass[a4paper, 12pt]{article}
 
+\usepackage{graphicx} % for images
 \usepackage[utf8]{inputenc}
+
+\graphicspath{ {./images/} } % put images in here
 
 \title{AI for IMGD Final Project Report}
 \author{Cole Granof \and Joseph Petitti \and Matthew Puentes}
@@ -55,8 +58,36 @@ randomized power ups to them.
 
 \section{How It Works}
 
-% TODO write
+Caves are generated with an augmented rule set of Conway's Game of Life. Instead
+of the typical rules, a cell dies if it has anywhere from zero to three
+neighbors. A cell stays the same if it has 4 neighbors. If a cell has greater
+than four neighbors, a new cell is born. Unlike Conway's Game of Life, this
+rule set reaches a stable state after only a few iterations, and produces the
+cave-like structures you see in our game. We also count cells that are outside
+the boundary of the grid as alive cells. Figures
 
+First, we randomize the initial state of our board. In our game, a cell has
+about a fifty percent chance of being alive. Then, we run this augmented Game of
+Life for twenty generates. The end state of this simulation is the basis for our
+level layout. Figures~\ref{fig:initialCave}-\ref{fig:finalCave} in
+Section~\ref{sec:cavePictures} shows the result of the algorithm in action.
+
+The one drawback of using cellular automata is that they are chaotic; it is very
+hard to choose initial conditions to create a specific outcome. Because of this,
+we often do not end up with a cave-system that is fully traversable. To overcome
+this, we search the grid to identify each unique cave. We mark the largest cave
+as the "main cave" and connect each "sub cave" to the main cave with a tunnel of
+destroyable blocks.
+
+Because we have knowledge of the size of each cave that is generated, we use
+this to make our power-ups spawn in more interesting locations. Small caves have
+a high density of power-ups, making them loot caches which are fun to find. This
+encourages the player to explore the map and find the small caves that spawn.
+Effectively, the chance for a power-up to spawn is inversely proportional to the
+size of the cave.
+
+
+% TODO write
 
 \section{Evaluation Results}
 
@@ -71,6 +102,57 @@ randomized power ups to them.
 \section{What We Learned}
 
 % TODO write
+
+
+\section{Self Evaluation}
+
+\subsection{Cole Granof}
+
+I worked on implementing game engine features so that my teammates would be able
+to easily add functionality to our game. This included a particle system, basic
+kinematics, and a system from adding behaviors to entities in the world. This
+was a lot of work to do without any external libraries, but I am happy with the
+result.
+
+Throughout the development, I added various optimizations so that we could have
+larger worlds with more enemies, all with minimal to no slowdown.
+
+I took the first pass at generating random cave levels using cellular automata.
+Matt improved on this by connecting the disconnected caves with breakable walls
+so that the entire cave was traversable.
+
+
+\section{Cave Pictures}
+\label{sec:cavePictures}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{initial-cave.png}
+	\caption{The initial cave on a randomized board}
+	\label{fig:initialCave}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{one-step-cave.png}
+	\caption{The final cave after reaching a steady state}
+	\label{fig:oneStepCave}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{two-step-cave.png}
+	\caption{The cave after two steps}
+	\label{fig:twoStepCave}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{final-cave.png}
+	\caption{The final cave after reaching a steady state}
+	\label{fig:finalCave}
+\end{figure}
+
 
 \end{document}
 
