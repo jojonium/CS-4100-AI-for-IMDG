@@ -19,15 +19,15 @@
 \section{What We Did}
 
 For the final AI for IMGD project we created a procedurally generated, top-down,
-twin stick shooter game, inspired by games like \textit{The Binding of Isaac}
-and \textit{Nuclear Throne}. In the game, the player controls a small
-eyeball-like character that can move around the game world, a large series of
-caves. There are several types of enemies that inhabit the caves, including some
-that chase the player, others that wander around randomly, and even some that
-can shoot bullets. Players fight these enemies while exploring the cave to track
-down three Boss enemies, which must be defeated to win. They can also find
-power-ups hidden the caves, powerful artifacts that increase the player's
-abilities in unique ways.
+twin stick shooter game, called \textbf{Proc Cave Game}, inspired by games like
+\textit{The Binding of Isaac} and \textit{Nuclear Throne}. In the game, the
+player controls a small eyeball-like character that can move around the game
+world, a large series of caves. There are several types of enemies that inhabit
+the caves, including some that chase the player, others that wander around
+randomly, and even some that can shoot bullets. Players fight these enemies
+while exploring the cave to track down three Boss enemies, which must be
+defeated to win. They can also find power-ups hidden the caves, powerful
+artifacts that increase the player's abilities in unique ways.
 
 The hero is controlled with a keyboard or gamepad, and can move around and shoot
 in any direction. Like all game entities in our custom engine, the hero has a
@@ -80,7 +80,6 @@ From a more academic standpoint, the heavy use of procedural generation in this
 genre of game allowed us to practice the concepts we learned in class and from
 the readings.
 
-
 \section{How It Relates to Things We Read}
 
 The main paper that inspired the design of our game was "Metagame in Symmetric
@@ -99,7 +98,6 @@ This paper helped us guide our thinking about how to parameterize difficulty.
 The researchers used AI agents to iteratively balance a game for
 difficulty~\autocite{liu2017}. We generate enemies of different difficulty
 levels by modifying various stats.
-
 
 \section{How It Works}
 
@@ -146,8 +144,21 @@ This ensures that the whole map is able to be traversed.
 
 \section{Evaluation Results}
 
-% TODO write
+To get feedback on our game as we developed it, we arranged for several other
+students to play-test Proc Cave Game. There were several recurring themes
+present in the evaluations we received:
 
+\begin{itemize}
+	\item Play-testers were impressed by the high-quality, polished look and
+		feel of the game, including slick animations and particle effects.
+	\item Players were disappointed by the lack of challenge, because at the
+		time of the play-test there was no way to lose the game.
+	\item Some players complained about the scarcity of power-ups.
+	\item Some players were annoyed by being swarmed by big enemies.
+\end{itemize}
+
+Our play-testers generally enjoyed playing the game, and expressed interest in
+trying the finished version as well.
 
 \section{What Those Results Mean}
 
@@ -181,39 +192,6 @@ into the master branch through pull requests on GitHub. This allowed us to
 review each other's code so we could provide feedback and stay up to date.
 
 \section{Self Evaluation}
-
-\subsection{Matt Puentes}
-
-I worked half/half on implementing engine features and game-specific features.
-My main contribution was on Collision, which I built from scratch. The collision
-works fairly well, with every entity having a-b rectangle collision with any
-other entities. The collision interacts well between entities and the world as
-well, allowing smooth movement and efficient terrain detection. It was took a
-while to get all of the implementation details right and to do it efficiently, 
-but it meant that later on we were able to fit a lot of entities on screen
-without a slowdown.
-
-My other big contribution was on the level generation. I created both the
-flood fill and cave connection systems described in the sections above, helping
-the game world feel more like we intended.
-
-Additionally, I worked with Joe, Cole and our play testers to help balance the
-game (capping power-up multipliers, changing world generation parameters, etc.)
-
-\subsection{Cole Granof}
-
-I worked on implementing game engine features so that my teammates would be able
-to easily add functionality to our game. This included a particle system, basic
-kinematics, and a system from adding behaviors to entities in the world. This
-was a lot of work to do without any external libraries, but I am happy with the
-result.
-
-Throughout the development, I added various optimizations so that we could have
-larger worlds with more enemies, all with minimal to no slowdown.
-
-I took the first pass at generating random cave levels using cellular automata.
-Matt improved on this by connecting the disconnected caves with breakable walls
-so that the entire cave was traversable.
 
 \section{Cave Pictures}
 \label{sec:cavePictures}
