@@ -1,8 +1,11 @@
 \documentclass[a4paper, 12pt]{article}
 
 \usepackage[utf8]{inputenc} % for UTF-8 support
-\usepackage{graphicx} % for images
+\usepackage{graphicx}       % for images
+\usepackage{hyperref}       % for hyperlinks
+\usepackage{biblatex}       % for references
 
+\bibliography{references}   % put citations here
 \graphicspath{ {./images/} } % put images in here
 
 \title{AI for IMGD Final Project Report}
@@ -137,7 +140,6 @@ I took the first pass at generating random cave levels using cellular automata.
 Matt improved on this by connecting the disconnected caves with breakable walls
 so that the entire cave was traversable.
 
-
 \section{Cave Pictures}
 \label{sec:cavePictures}
 
@@ -169,6 +171,9 @@ so that the entire cave was traversable.
 	\label{fig:finalCave}
 \end{figure}
 
+\clearpage
+
+\printbibliography
 
 \end{document}
 
