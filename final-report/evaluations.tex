@@ -1,0 +1,47 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[utf8]{inputenc} % for UTF-8 support
+
+\title{AI for IMGD Final Project Evaluations}
+\author{Cole Granof \and Joe Petitti \and Matt Puentes}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Matt Puentes}
+
+I worked half/half on implementing engine features and game-specific features.
+My main contribution was on Collision, which I built from scratch. The collision
+works fairly well, with every entity having a-b rectangle collision with any
+other entities. The collision interacts well between entities and the world as
+well, allowing smooth movement and efficient terrain detection. It was took a
+while to get all of the implementation details right and to do it efficiently, 
+but it meant that later on we were able to fit a lot of entities on screen
+without a slowdown.
+
+My other big contribution was on the level generation. I created both the
+flood fill and cave connection systems described in the sections above, helping
+the game world feel more like we intended.
+
+Additionally, I worked with Joe, Cole and our play testers to help balance the
+game (capping power-up multipliers, changing world generation parameters, etc.)
+
+\section{Cole Granof}
+
+I worked on implementing game engine features so that my teammates would be able
+to easily add functionality to our game. This included a particle system, basic
+kinematics, and a system from adding behaviors to entities in the world. This
+was a lot of work to do without any external libraries, but I am happy with the
+result.
+
+Throughout the development, I added various optimizations so that we could have
+larger worlds with more enemies, all with minimal to no slowdown.
+
+I took the first pass at generating random cave levels using cellular automata.
+Matt improved on this by connecting the disconnected caves with breakable walls
+so that the entire cave was traversable.
+
+\end{document}
+
